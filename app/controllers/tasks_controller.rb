@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
-  def index
-    @tasks = Task.all.page(params[:page]).per(3)
-  end
+  # def index
+  #   @tasks = Task.all.page(params[:page]).per(3)
+  # end
 
   def show
     @task = Task.find(params[:id])
@@ -53,5 +53,4 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:content, :status)
   end
-
 end
